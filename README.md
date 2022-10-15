@@ -5,7 +5,7 @@
 * Vite/React
 * Storybook
 
-Deploy do Provejeto <https://ericcleptonsilva.github.io/lab-ds>
+Deploy Storybook - <https://ericcleptonsilva.github.io/lab-ds>
 
 
 ### Figma
