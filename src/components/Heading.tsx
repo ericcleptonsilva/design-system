@@ -4,10 +4,11 @@ import { ReactNode } from "react";
 export interface HeadingProps {
   size?: "sm" | "md" | "lg";
   children: ReactNode;
-  asChild: boolean;
+  asChild?: boolean;
+  className?: string;
 }
 
-export const Heading = ({ size = "md", children, asChild }: HeadingProps) => {
+export const Heading = ({ size = "md", children, asChild, className }: HeadingProps) => {
   const Comp = asChild ? Slot : "h2";
   const FontSizeCustom = {
     "text-lg": size == "sm",
@@ -15,7 +16,7 @@ export const Heading = ({ size = "md", children, asChild }: HeadingProps) => {
     "text-2xl": size == "lg",
   };
   return (
-    <Comp className={clsx("text-gray-100 font-bold font-sans", FontSizeCustom)}>
+    <Comp className={clsx("text-gray-100 font-bold font-sans", FontSizeCustom, className)}>
       {children}
     </Comp>
   );
